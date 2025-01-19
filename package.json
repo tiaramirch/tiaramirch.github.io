@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
+    "build": "next build && touch ./out/.nojekyll",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out -t true"
+    "deploy": "gh-pages -d out --nojekyll"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
