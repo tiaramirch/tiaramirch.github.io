@@ -159,8 +159,8 @@ export default function Home() {
               }`}
             >
               <div
-                className={`bg-${
-                  message.sender == "user" ? "[#644e8c]" : "[#1f1f2d]"
+                className={`${
+                  message.sender === "user" ? "bg-[#644e8c]" : "bg-[#1f1f2d]"
                 } text-white rounded-xl p-3 max-w-[70%] my-1`}
               >
                 {message.text}
