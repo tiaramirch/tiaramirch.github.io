@@ -125,7 +125,15 @@ export default function Landing() {
 
       if (charIndex === responses[3].length) {
         clearInterval(typingInterval);
-        setTimeout(() => router.push("/main"), 2000);
+        setTimeout(() => {
+          setMessages((prev) => [
+            ...prev,
+            { sender: "bot", text: "No going back now..." },
+          ]);
+          setTimeout(() => {
+            router.push("/main");
+          }, 1000);
+        }, 2000);
       }
     }, 50);
   };
