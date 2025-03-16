@@ -1,4 +1,4 @@
-import { TopNav } from "../ui/topnav";
+import { NavOld } from "../ui/navold";
 
 export default function MainLayout({
   children,
@@ -7,9 +7,9 @@ export default function MainLayout({
 }) {
   return (
     <html lang="en">
-      <body className="">
+      <body suppressHydrationWarning className="">
         {/* Layout UI */}
-        <TopNav />
+        <NavOld />
         {/* Place children where you want to render a page or nested layout */}
         <main>{children}</main>
       </body>

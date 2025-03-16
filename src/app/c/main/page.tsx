@@ -18,25 +18,33 @@ export default function Home() {
               <Message
                 text="Do you remember this place?"
                 align="start"
-                bgColor="#5566ff92"
+                bgColor="bg-[#5566ff92]"
               />
             </div>
-            <Message text="Of course not" align="start" bgColor="#5566ff92" />
+            <Message
+              text="Of course not"
+              align="start"
+              bgColor="bg-[#5566ff92]"
+            />
             <Message
               text="I just had it renovated"
               align="start"
-              bgColor="#5566ff92"
+              bgColor="bg-[#5566ff92]"
             />
-            <Message text="What's in it?" align="end" bgColor="#955cff9d" />
+            <Message
+              text="What's in it?"
+              align="end"
+              bgColor="bg-[#955cff9d]"
+            />
             <Message
               text="Nothing much. Just storage for now"
               align="start"
-              bgColor="#5566ff92"
+              bgColor="bg-[#5566ff92]"
             />
             <Message
               text="You are welcome to explore, of course..."
               align="start"
-              bgColor="#5566ff92"
+              bgColor="bg-[#5566ff92]"
             />
           </div>
         </div>

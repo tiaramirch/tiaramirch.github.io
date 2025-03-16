@@ -25,7 +25,7 @@ const Message: React.FC<MessageProps> = ({ text, align, bgColor }) => {
       } py-16 snap-start`}
     >
       <div
-        className={`bg-[${bgColor}] text-white rounded-3xl p-3 px-5 max-w-[70%] my-1 text-lg`}
+        className={`${bgColor} text-white rounded-3xl p-3 px-5 max-w-[70%] my-1 text-lg`}
       >
         {text}
       </div>

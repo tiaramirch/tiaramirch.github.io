@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Eczar } from "next/font/google";
-import "./globals.css";
+import ".././globals.css";
 
 const eczar = Eczar({
   variable: "--font-eczar",

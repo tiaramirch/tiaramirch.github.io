@@ -1,21 +1,33 @@
 "use client";
 
 import { url } from "inspector";
+import * as motion from "motion/react-client";
 
-const TopNav = () => {
+interface TopNavProps {
+  page: string;
+}
+
+const TopNav: React.FC<TopNavProps> = ({ page }) => {
   return (
-    <>
-      <div className="w-full h-52 bg-gradient-to-b from-black to-transparent absolute"></div>
-      <div className="w-svh h-[4%] bg-transparent flex justify-center absolute top-20 left-3 right-3 sm:left-16 sm:right-16 border-[3px] border-[#1c0e2c] bg-gradient-to-t from-[#1c0e2c] to-[#7539d4] rounded-full text-lg">
-        <div className="w-[80%] flex flex-row justify-between items-center">
-          <div>Home</div>
-          <div>About</div>
-          <div>Projects</div>
-          <div>Contact Me</div>
-        </div>
+    <div className="h-full w-svh relative z-20 inset-y-0">
+      <div className="flex flex-row bg-black w-full h-[10%] justify-between px-20 items-center">
+        {["Home", "About", "Projects", "Interests", "Contact Me"].map(
+          (item) => (
+            <motion.div
+              key={item}
+              whileHover={{ backgroundColor: "#7d32f8", scale: 1.1 }}
+              whileTap={{ scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+              className={`p-2 rounded-md text-white font-bold cursor-pointer w-32 flex justify-center ${
+                page === item ? "border-b-4 border-[#ffffff]" : ""
+              }`}
+            >
+              {item}
+            </motion.div>
+          )
+        )}
       </div>
-    </>
+    </div>
   );
 };
-
 export { TopNav };
