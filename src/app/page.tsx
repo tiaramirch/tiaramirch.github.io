@@ -1,13 +1,23 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { TopNav } from "./ui/topnav";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Research from "./components/Research";
+import Footer from "./components/Footer";
 
-export default function Home() {
+function Page() {
   return (
-    <div className="w-svh h-svh bg-[#bdbde7]">
-      <div className="w-full">Top Nav</div>
-
-      <TopNav page="Home" />
+    <div className="scroll-smooth font-sans text-gray-800 bg-gray-50">
+      <Navbar />
+      <main>
+        <Profile />
+        <About />
+        <Experience />
+        <Research />
+      </main>
+      <Footer />
     </div>
   );
 }
+
+export default Page;
